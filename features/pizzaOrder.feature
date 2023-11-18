@@ -18,11 +18,11 @@
 #Sample Feature Definition Template
 Feature: Add feature description here - Order Pizza from Swiggy 
 Scenario: Order Pizza From Swiggy
-Given Navigate to the landing page of Swiggy "https://www.swiggy.com/"
 
+Given Navigate to the landing page of Swiggy "https://www.swiggy.com/"
 When Enter location as "<city>"
-Then Select first location from suggested location in suggestion-box
-When Redirect to the ItemPage
+#Then Select first location from suggested location in suggestion-box
+#When Redirect to the ItemPage
 #When Hover over search icon
 #When Enter Item as "Pizza"
 #When Select first suggested Item in pizza cateogory
@@ -35,4 +35,4 @@ When Redirect to the ItemPage
 Examples: 
 |city|
 |Mumbai|
-#|Chennai|
+|Chennai|

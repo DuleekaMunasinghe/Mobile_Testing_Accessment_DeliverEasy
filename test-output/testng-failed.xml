@@ -3,13 +3,11 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.swiggy.runner.CucumberRunnerTests">
+      <class name="UtilitiesExcelReader.LoginData">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
+          <include name="testReadExcelData"/>
         </methods>
-      </class> <!-- com.swiggy.runner.CucumberRunnerTests -->
+      </class> <!-- UtilitiesExcelReader.LoginData -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
