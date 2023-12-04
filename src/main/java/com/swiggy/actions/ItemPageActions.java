@@ -13,6 +13,8 @@ public class ItemPageActions extends HelperClass{
 	private Actions actions;
 	private WebDriverWait wait;
 	
+	
+	
 	public void hoverOverSerch () {
 		wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.serchIcon(getDriver())));
 		ItemPageLocators.serchIcon(getDriver()).click();

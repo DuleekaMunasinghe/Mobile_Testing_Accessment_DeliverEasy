@@ -18,10 +18,11 @@ public class LandingPageActions extends HelperClass {
 	}
 
 	//Select first location from suggested location in suggestion-box
-	public static void selectLocation() throws IOException {
+	public static void selectLocation() throws IOException, InterruptedException {
 		waitForVisibilityOfElement(By.xpath("//span[contains(@class ,'_2W-T9')]"),Duration.ofSeconds(20));
 		//wait.until(ExpectedConditions.visibilityOf(LandingPageLocators.locationSuggestion(getDriver())));
 		LandingPageLocators.locationSuggestion(getDriver()).click();
+		Thread.sleep(3000);
 	}
 
 	public void continuebtn() {

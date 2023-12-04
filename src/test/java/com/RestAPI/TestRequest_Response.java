@@ -1,4 +1,4 @@
-package RestAPI;
+package com.RestAPI;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;

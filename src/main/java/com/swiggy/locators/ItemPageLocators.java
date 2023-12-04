@@ -11,12 +11,12 @@ public class ItemPageLocators extends HelperClass {
 	
 	public static WebElement serchIcon (WebDriver driver)
 	{
-		return driver.findElement(By.linkText("Search"));
+		return driver.findElement(By.xpath("//span[normalize-space()='Search']"));
 	}
 	
 	public static WebElement placeHolder (WebDriver driver)
 	{
-		return driver.findElement(By.xpath("//input[contains(@placeholder ,'Search for restaurants or dishes')]"));
+		return driver.findElement(By.xpath("//input[@placeholder='Search for restaurants and food']]"));
 	}
 	
 	public static WebElement suggestItems (WebDriver driver)
