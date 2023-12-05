@@ -11,28 +11,64 @@ import com.swiggy.utils.HelperClass;
 public class ItemPageActions extends HelperClass{
 	
 	private Actions actions;
-	private WebDriverWait wait;
+	//private static WebDriverWait wait;
 	
 	
 	
-	public void hoverOverSerch () {
-		wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.serchIcon(getDriver())));
+	public static void hoverOverSerch () throws InterruptedException {
+		//wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.serchIcon(getDriver())));
+		Thread.sleep(1000);
 		ItemPageLocators.serchIcon(getDriver()).click();
 	}
 	
-	public void enterItem(String item) {
-		wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.placeHolder(getDriver())));
-		ItemPageLocators.placeHolder(getDriver()).sendKeys(item);
+	public static void enterItem() throws InterruptedException {
+		//wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.placeHolder(getDriver())));
+		Thread.sleep(2000);
+		ItemPageLocators.placeHolder(getDriver()).sendKeys("Pizza");
+		Thread.sleep(2000);
+		// pressing keyboard enter key
+		Actions actions = new Actions(driver);
+		actions. sendKeys(Keys.ENTER).build().perform();
+		Thread.sleep(4000);
 		
 	}
-	public void searchItem() {
-		wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.suggestItems(getDriver())));
-		actions. sendKeys(Keys.ENTER).build().perform();
+	public static void searchResturant() throws InterruptedException {
+		//wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.suggestItems(getDriver())));
+		ItemPageLocators.resturant(getDriver()).click();
+		Thread.sleep(2000);
+		//actions. sendKeys(Keys.ENTER).build().perform();
 	}
-	public void selectFirstItem() {
-		wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.firstItem(getDriver())));
-		ItemPageLocators.firstItem(getDriver()).click();
+	public static void selectPizzaHut() throws InterruptedException {
+		//wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.suggestItems(getDriver())));
+		ItemPageLocators.suggestItem(getDriver()).click();
+		Thread.sleep(3000);
 	}
+	public static void featchSearchIcon() throws InterruptedException {
+		//wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.firstItem(getDriver())));
+		ItemPageLocators.searchIcon(getDriver()).click();
+		Thread.sleep(2000);		
+	}
+	public static void orderitem() throws InterruptedException {
+		//wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.firstItem(getDriver())));
+		ItemPageLocators.orderMargherita(getDriver()).sendKeys("Margherita");
+		Thread.sleep(2000);		
+	}
+		public static void addingItem() throws InterruptedException {
+		//wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.firstItem(getDriver())));
+		ItemPageLocators.addItem1(getDriver()).click();
+		Thread.sleep(2000);
+		ItemPageLocators.addItem2(getDriver()).click();
+		Thread.sleep(2000);
+		ItemPageLocators.addItem2(getDriver()).click();
+		Thread.sleep(2000);
+		ItemPageLocators.addItem4(getDriver()).click();
+		Thread.sleep(2000);	
+	}
+		public static void clickCart() throws InterruptedException {
+			//wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.firstItem(getDriver())));
+			ItemPageLocators.cart(getDriver()).click();
+			Thread.sleep(2000);		
+		}
 
 
 }
