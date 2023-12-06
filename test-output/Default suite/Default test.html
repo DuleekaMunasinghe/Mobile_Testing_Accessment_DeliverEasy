@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 05 21:24:49 NZDT 2023</td>
+<td>Started on:</td><td>Wed Dec 06 22:55:45 NZDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>61 seconds (61945 ms)</td>
+<tr><td>Total time:</td><td>29 seconds (29982 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,73 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.swiggy.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.swiggy.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Item page", "Optional[Order Pizza from Swiggy]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[normalize-space()=&apos;Search&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-9BJ4JH8&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2ec4139b-ead4-4b21-a683-b7e193f536aa, findElement {using=xpath, value=//span[normalize-space()=&apos;Search&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:59152, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11692, moz:profile: C:\Users\dulee\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:59152/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2ec4139b-ead4-4b21-a683-b7e193f536aa
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.swiggy.locators.ItemPageLocators.serchIcon(ItemPageLocators.java:14)
+	at com.swiggy.actions.ItemPageActions.hoverOverSerch(ItemPageActions.java:21)
+	at com.swiggy.definitions.OrderPizzaDef.hover_over_search_icon(OrderPizzaDef.java:50)
+	at ✽.Hover over search icon(file:///C:/Users/dulee/eclipse-workspace/DuleekaSwiggy/features/pizzaOrder.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace608174634", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace608174634'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[normalize-space()=&apos;Search&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-9BJ4JH8&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2ec4139b-ead4-4b21-a683-b7e193f536aa, findElement {using=xpath, value=//span[normalize-space()=&apos;Search&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0.1, moz:accessibilityChecks: false, moz:buildID: 20231129155202, moz:debuggerAddress: 127.0.0.1:59152, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11692, moz:profile: C:\Users\dulee\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:59152/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2ec4139b-ead4-4b21-a683-b7e193f536aa
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at com.swiggy.locators.ItemPageLocators.serchIcon(ItemPageLocators.java:14)
+	at com.swiggy.actions.ItemPageActions.hoverOverSerch(ItemPageActions.java:21)
+	at com.swiggy.definitions.OrderPizzaDef.hover_over_search_icon(OrderPizzaDef.java:50)
+	at ✽.Hover over search icon(file:///C:/Users/dulee/eclipse-workspace/DuleekaSwiggy/features/pizzaOrder.feature:9)
+</pre></div></td>
+<td>16</td>
+<td>com.swiggy.runner.CucumberRunnerTests@7d8704ef</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,9 +143,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.swiggy.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.swiggy.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Order Pizza From Swiggy", "Optional[Add feature description here - Order Pizza from Swiggy]"</td>
+<td title='com.swiggy.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.swiggy.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Landing page", "Optional[Order Pizza from Swiggy]"</td>
 <td></td>
-<td>60</td>
+<td>13</td>
 <td>com.swiggy.runner.CucumberRunnerTests@7d8704ef</td></tr>
 </table><p>
 </body>

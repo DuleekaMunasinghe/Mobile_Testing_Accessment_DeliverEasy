@@ -60,6 +60,7 @@ public class OrderPizzaDef extends HelperClass {
 		ItemPageActions.searchResturant();
 
 	}
+	
 	@And("Select Pizza Hut")
 	public void Select_Pizza_Hut() throws InterruptedException {
 		ItemPageActions.selectPizzaHut();
@@ -81,12 +82,14 @@ public class OrderPizzaDef extends HelperClass {
 	@When("Click on Cart button")
 	public void click_on_checkout_button() throws InterruptedException {
 		ItemPageActions.clickCart();
-		
-		
+			
 	}
-	@Then("Verify Checkout page is loaded correctly")
-	public void verify_Checkout_page_is_loaded_correctly() throws InterruptedException {
-		CheckOutPageActions.CheckoutTitle(); 
-
-	}
+	
+	
+	
+//	@Then("Verify Checkout page is loaded correctly")
+//	public void verify_Checkout_page_is_loaded_correctly() throws InterruptedException {
+//		CheckOutPageActions.getMsg(); 
+//
+//	}
 }

@@ -20,4 +20,9 @@ public class CheckOutPageLocators extends HelperClass {
 //{
 //	return driver.findElement(By.xpath("//span[normalize-space()='Cart']"));
 //}
+	
+	public static WebElement HeadingMsg (WebDriver driver)
+	{
+		return driver.findElement(By.xpath("//span[contains(@class,'2EQ3T')]"));
+	}
 }

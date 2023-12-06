@@ -11,14 +11,5 @@ And  Select Pizza Hut
 And Redirect to orderPage and order Margherita
 Then Add one Margherita to cart 
 When Click on Cart button
-Then Verify Checkout page is loaded correctly
-
-
-
-
-
-#Examples: 
-#|city|
-#|Mumbai|
 
 

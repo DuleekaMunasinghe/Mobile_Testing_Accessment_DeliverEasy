@@ -62,5 +62,9 @@ public class ItemPageLocators extends HelperClass {
 	{
 		return driver.findElement(By.xpath("//span[normalize-space()='Cart']"));
 	}
+	public static WebElement suggestItems (WebDriver driver)
+	{
+		return driver.findElement(By.xpath("//div[contains(@class,'_3sbqM')]"));
+	}
 	
 }
