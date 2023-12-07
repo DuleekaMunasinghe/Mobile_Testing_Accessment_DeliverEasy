@@ -1,6 +1,7 @@
 package com.swiggy.actions;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,6 +16,10 @@ public class ItemPageActions extends HelperClass{
 	
 	
 	
+	public ItemPageActions(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void hoverOverSerch () throws InterruptedException {
 		//wait.until(ExpectedConditions.visibilityOf(ItemPageLocators.serchIcon(getDriver())));
 		Thread.sleep(1000);

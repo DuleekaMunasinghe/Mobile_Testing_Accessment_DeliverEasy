@@ -1,4 +1,5 @@
 package com.swiggy.actions;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -9,6 +10,10 @@ public class CheckOutPageActions extends HelperClass {
 	
 	private static WebDriverWait wait;
 	
+	public CheckOutPageActions(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public static String getMsg() {
 		
 		wait.until(ExpectedConditions.visibilityOf(CheckOutPageLocators.HeadingMsg(getDriver())));

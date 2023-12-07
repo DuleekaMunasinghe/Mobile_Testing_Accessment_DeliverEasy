@@ -1,5 +1,6 @@
 package com.swiggy.actions;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,6 +12,11 @@ public class PlaceOrderActions extends HelperClass{
 
 	private Actions actions;
 	private WebDriverWait wait;
+
+
+	public PlaceOrderActions(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
 
 
 	public void addItem() {

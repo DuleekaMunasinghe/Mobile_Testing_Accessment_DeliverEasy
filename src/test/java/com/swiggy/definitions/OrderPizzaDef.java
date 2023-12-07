@@ -84,12 +84,12 @@ public class OrderPizzaDef extends HelperClass {
 		ItemPageActions.clickCart();
 			
 	}
-	
-	
-	
-//	@Then("Verify Checkout page is loaded correctly")
-//	public void verify_Checkout_page_is_loaded_correctly() throws InterruptedException {
-//		CheckOutPageActions.getMsg(); 
-//
-//	}
+			
+	@Then("Verify Checkout page is loaded correctly")
+	public void verify_Checkout_page_is_loaded_correctly() throws InterruptedException {
+		String expectedErrMsg = "SECURE CHECKOUT";
+		String actualErrMsg = CheckOutPageActions.getMsg();
+		Assert.assertEquals(actualErrMsg, expectedErrMsg); 
+
+	}
 }
