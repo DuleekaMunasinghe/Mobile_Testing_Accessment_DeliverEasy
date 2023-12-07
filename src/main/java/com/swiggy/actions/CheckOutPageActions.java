@@ -8,15 +8,15 @@ import com.swiggy.utils.HelperClass;
 
 public class CheckOutPageActions extends HelperClass {
 	
-	private static WebDriverWait wait;
+	
 	
 	public CheckOutPageActions(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static String getMsg() {
-		
-		wait.until(ExpectedConditions.visibilityOf(CheckOutPageLocators.HeadingMsg(getDriver())));
+	public static String getMsg() throws InterruptedException {
+		Thread.sleep(2000);
+		CheckOutPageLocators.HeadingMsg(getDriver());
 		String text = CheckOutPageLocators.HeadingMsg(getDriver()).getText();
 		return text;
 	}

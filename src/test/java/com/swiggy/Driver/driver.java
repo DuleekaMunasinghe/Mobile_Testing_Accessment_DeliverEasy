@@ -12,13 +12,13 @@ import java.net.URL;
 import com.swiggy.actions.CheckOutPageActions;
 import com.swiggy.actions.ItemPageActions;
 import com.swiggy.actions.LandingPageActions;
-import com.swiggy.actions.PlaceOrderActions;
+//import com.swiggy.actions.PlaceOrderActions;
 
 public class driver extends Tools {
 	protected static DesiredCapabilities cap;
 	protected static LandingPageActions landingPage;
 	protected static ItemPageActions items;
-	protected static PlaceOrderActions placeOrder;
+//	protected static PlaceOrderActions placeOrder;
 	protected static CheckOutPageActions checkOut;
   @Test
   public void init() throws MalformedURLException {
@@ -31,7 +31,7 @@ public class driver extends Tools {
 		//driver = new ChromeDriver();
 		landingPage = new LandingPageActions(driver);
 		items = new ItemPageActions(driver);
-		placeOrder = new PlaceOrderActions(driver);
+//		placeOrder = new PlaceOrderActions(driver);
 		checkOut = new CheckOutPageActions(driver);
   }
 }

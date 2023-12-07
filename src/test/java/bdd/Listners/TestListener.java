@@ -90,7 +90,7 @@
 //		// attach screenshots to report
 //		try {
 //			ExtentTestManager.getTest().fail("Screenshot",
-//					MediaEntityBuilder.createScreenCaptureFromPath(targetLocation).build());
+////					MediaEntityBuilder.createScreenCaptureFromPath(targetLocation).build());
 //		} catch (IOException e) {
 //			log.info("An exception occured while taking screenshot " + e.getCause());
 //		}
