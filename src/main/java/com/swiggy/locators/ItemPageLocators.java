@@ -48,11 +48,6 @@ public class ItemPageLocators extends HelperClass {
 		return driver.findElement(By.xpath("//span[contains(normalize-space(),'Continue')]"));
 	}
 	
-//	public static WebElement addItem3 (WebDriver driver)
-//	{
-//		return driver.findElement(By.xpath("//span[contains(normalize-space(),'Continue')]"));
-//	}
-	
 	public static WebElement addItem4 (WebDriver driver)
 	{
 		return driver.findElement(By.xpath("//span[contains(normalize-space(),'Add Item')]"));

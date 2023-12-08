@@ -29,37 +29,25 @@ public class HelperClass {
 	public static WebDriver getDriver() {
 		return driver;
 	}
-
 	// Initiate driver
 	public static void setUpDriver() {
 
-		// System.setProperty("webdriver.chrome.driver",
-		// "C:\\SeleniumDrivers\\chromedriver\\chromedriver.exe");
-		// ChromeOptions options = new ChromeOptions();
-		// options.addArguments("--diable--notifications");
-		// options.addArguments("--remote-allow-origins=*");
-		// driver = new ChromeDriver(options);
 		System.setProperty("webdriver.gecko.driver", "C:\\SeleniumDrivers\\geckodriver\\geckodriver.exe");
 		driver = new FirefoxDriver(); // Assign to the class-level variable
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUTIMP));
-
 	}
 
 	// Wait until element visible
 	public static void waitForVisibilityOfElement(By locator, Duration time) throws IOException {
 		wait = new WebDriverWait(getDriver(), time);
 		wait.until(ExpectedConditions.visibilityOf(LandingPageLocators.locationBox(getDriver())));
-
 	}
-
 	public static void tearDown() {
 
 		if (driver != null) {
 			driver.quit();
 		}
-
 		helperClass = null;
 	}
-
 }
