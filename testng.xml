@@ -5,13 +5,9 @@
         <parameter name="hubURL" value="http://localhost:4444/ui#"/>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="com.swiggy.runner.CucumberRunnerTests" />
-			<class name="com.RestAPI.TestRequest_Response" />
-			<class name="UtilitiesExcelReader.LoginData">
-				<methods>
-					<include name="testReadExcelData" />
-				</methods>
-			</class>
+			<class name="com.DeliverEasy.runner.CucumberRunnerTests" />
+			
+			
 		</classes>
 	</test> <!--
 	Test -->
