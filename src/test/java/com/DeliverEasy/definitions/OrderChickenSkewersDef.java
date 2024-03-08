@@ -31,6 +31,8 @@ public class OrderChickenSkewersDef {
 	
 	public void navigate_to_the_landing_page_of_swiggy() throws MalformedURLException {
 		
+//		HelperClass.setUpDriver();
+		
 		@SuppressWarnings({ "deprecation", "unused" })
 		URL url = new URL("http://localhost:4723/wd/hub");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -42,13 +44,17 @@ public class OrderChickenSkewersDef {
 		driver = new AndroidDriver(url, capabilities);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println(driver.getSessionId());
+		
+		
 //		Assert.assertTrue(pageTitle.equals("Order food online from India's best food delivery service. Order from restaurants near you")); 
 	}
 	
 	@When("Enter location as {string}")
 	public void enter_location_as(String string) throws IOException {
 		//Enter location
+//		HelperClass.EnterLocation();
 		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"address\"]")).sendKeys("11 Percy Kinsman Cresent");
+		driver.hideKeyboard();
 		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"address\"]")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@text=\"11 Percy Kinsman CrescentRiverstone Terraces, Upper Hutt\"]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -68,7 +74,7 @@ public class OrderChickenSkewersDef {
 	public void searching_the_restaurent(String string) throws InterruptedException {
 		List<WebElement> APIDemoList = driver.findElements(By.xpath("//android.widget.TextView"));
 		scrollUpText lib = new scrollUpText();
-		lib.scrollTillElement("Aroy Thai (Upper Hutt)", driver);
+		lib.scrollTillElement(string, driver);
 		driver.findElement(By.xpath("//android.widget.TextView[@text=\"Aroy Thai (Upper Hutt)\"]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		System.out.println("++++++++++++++++++++");
@@ -79,52 +85,44 @@ public class OrderChickenSkewersDef {
 	public void searching_the_dish(String string) throws InterruptedException {
 		List<WebElement> APIDemoList1 = driver.findElements(By.xpath("//android.widget.TextView"));
 		scrollUpText lib1 = new scrollUpText();
-		lib1.scrollTillElement("Chicken Skewers (4pcs)", driver);
-		driver.findElement(By.xpath("//android.widget.TextView[@text=\"Chicken Skewers (4pcs)\"]")).click();
+		lib1.scrollTillElement(string, driver);
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\"Sugarcane Prawns (3pcs)\"]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//		ItemPageActions.enterItem();
+
+		
+		//		ItemPageActions.enterItem();
 
 	}
 	@When("Click on Add to cart button")
 	public void click_on_Add_to_cart_button() throws InterruptedException {
-		driver.findElement(By.xpath("//android.widget.TextView[@text=\"Prawn Spring Rolls (5pcs)\"]")).click();
+		driver.findElement(By.xpath("//android.view.View[@content-desc=\"Sugarcane Prawns (3pcs) $10.50 Shrimp, fish, carrots, spring onions, sugarcane, sweet chilli sauce (deep fried).\"]")).click();
 	}
-//		ItemPageActions.searchResturant();
+
+	
+	
+	//		ItemPageActions.searchResturant();
 
 //	}
 //	
 	@And("Click on view cart button")
 	public void click_on_view_cart_button() throws InterruptedException {
-		driver.findElement(By.xpath("//android.widget.TextView[@text='grated vegetables, glass noodles, sweet chilli sauce (deep fried)']")).click();
-//		ItemPageActions.selectPizzaHut();
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\"View cart\"]")).click();
+
+		
+		//		ItemPageActions.selectPizzaHut();
 
 	}
 		
 	@And("Click on Checkout button")
 	public void click_on_Checkout_button() throws InterruptedException {
-		driver.findElement(By.xpath("//android.widget.TextView[@text=\"View cart\"]")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text=\"View cart\"]")).click();
-//		ItemPageActions.featchSearchIcon();
+		driver.findElement(By.xpath("//android.view.View[@content-desc=\"View cart $10.50\"]")).click();
+//		driver.findElement(By.xpath("//android.widget.TextView[@text=\"View cart\"]")).click();
+
+		
+		
+		//		ItemPageActions.featchSearchIcon();
 //		ItemPageActions.orderitem();
 		
 	}
-//	@Then("Add one Margherita to cart")
-//	public void add_one_Margherita_to_cart() throws InterruptedException {
-//		ItemPageActions.addingItem();
-//		
-//				
-//	}
-//	@When("Click on Cart button")
-//	public void click_on_checkout_button() throws InterruptedException {
-//		ItemPageActions.clickCart();
-//			
-//	}
-//			
-//	@Then("Verify Checkout page is loaded correctly")
-//	public void verify_Checkout_page_is_loaded_correctly() throws InterruptedException {
-//		String expectedErrMsg = "SECURE CHECKOUT";
-//		String actualErrMsg = CheckOutPageActions.getMsg();
-//		Assert.assertEquals(actualErrMsg, expectedErrMsg); 
-//
-//	}
+//	
 }
