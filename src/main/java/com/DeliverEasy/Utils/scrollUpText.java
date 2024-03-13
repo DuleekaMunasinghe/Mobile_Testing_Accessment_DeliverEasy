@@ -1,4 +1,4 @@
-package com.DeliverEasy.Driver;
+package com.DeliverEasy.Utils;
 
 import java.util.List;
 
@@ -10,13 +10,13 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class scrollUpButton {
+public class scrollUpText {
 
-	public boolean isElementVisible(String expView, AndroidDriver driver) {
+	public static boolean isElementVisible(String expView, AndroidDriver driver) {
 		// MobileElement expElem =
 	
 		Boolean flgPresent = false;
-		List<WebElement> lstViews = driver.findElements(By.xpath("//android.widget.Button"));
+		List<WebElement> lstViews = driver.findElements(By.xpath("//android.widget.TextView"));
 		for (WebElement view : lstViews) {
 			System.out.println(view.getText());
 			if (view.getText().contains(expView)) {
@@ -48,7 +48,7 @@ public class scrollUpButton {
 
 //Condition: View name should be present in the list / application
 //Views, Seek Bar  : Name of a view
-	public boolean scrollTillElement(String elem, AndroidDriver driver) {
+	public static boolean scrollTillElement(String elem, AndroidDriver driver) {
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {

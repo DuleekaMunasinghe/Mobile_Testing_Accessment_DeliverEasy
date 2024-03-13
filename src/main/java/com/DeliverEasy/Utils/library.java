@@ -1,4 +1,4 @@
-package com.DeliverEasy.Driver;
+package com.DeliverEasy.Utils;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
